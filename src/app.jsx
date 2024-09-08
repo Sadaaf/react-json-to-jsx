@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import "./app.css";
 const task = {
   id: "uniqueId001",
   subtitle: "Subtitle",
@@ -98,7 +98,7 @@ const getDay = (dateStr) => {
 };
 
 const CommentListItem = ({ comment }) => (
-  <div key={comment.commentId}>
+  <div key={comment.commentId} className="comment-item">
     <h3>{comment.user.name}</h3>
     <p>{comment.text}</p>
   </div>
@@ -123,24 +123,24 @@ const formatDate = (dateStr) => {
 };
 
 const App = () => (
-  <div>
-    <h1>
+  <div className="day-card">
+    <h1 className="title">
       {getDay(task.createdAt)}, {formatDate(task.createdAt)}
     </h1>
-    <h3>{task.subtitle}</h3>
-    <ul>
+    <h3 className="sub-title">{task.subtitle}</h3>
+    <ul className="tag-ul">
       {task.tags.map((tag) => (
         <TagListItem key={tag.id} tag={tag} />
       ))}
     </ul>
-    <hr />
-    <p>Notes linked to people</p>
-    <div>
+    <div className="line"></div>
+    <p className="notes">Notes linked to people</p>
+    <div className="comments">
       {task.comments.map((comment) => (
         <CommentListItem key={comment.commentId} comment={comment} />
       ))}
     </div>
-    <ul>
+    <ul className="tasks">
       {task.tasks.map((task) => (
         <TaskListItem key={TaskListItem.id} task={task} />
       ))}
