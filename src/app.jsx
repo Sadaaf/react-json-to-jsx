@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const task = {
   id: "uniqueId001",
   subtitle: "Subtitle",
@@ -95,6 +97,20 @@ const getDay = (dateStr) => {
   //   }
 };
 
+const CommentListItem = ({ comment }) => (
+  <div key={comment.commentId}>
+    <h3>{comment.user.name}</h3>
+    <p>{comment.text}</p>
+  </div>
+);
+const TaskListItem = ({ task }) => (
+  <li key={task.id}>
+    <h3>{task.title}</h3>
+    <small>Status: {task.status}</small>
+    <p>{task.text}</p>
+  </li>
+);
+
 const TagListItem = ({ tag }) => (
   <li key={tag.id}>
     <small>{tag.icon}</small> - {tag.text}
@@ -121,22 +137,27 @@ const App = () => (
     <p>Notes linked to people</p>
     <div>
       {task.comments.map((comment) => (
-        <div key={comment.commentId}>
-          <h3>{comment.user.name}</h3>
-          <p>{comment.text}</p>
-        </div>
+        <CommentListItem key={comment.commentId} comment={comment} />
       ))}
     </div>
     <ul>
       {task.tasks.map((task) => (
-        <li key={task.id}>
-          <h3>{task.title}</h3>
-          <small>Status: {task.status}</small>
-          <p>{task.text}</p>
-        </li>
+        <TaskListItem key={TaskListItem.id} task={task} />
       ))}
     </ul>
   </div>
 );
+
+TaskListItem.propTypes = {
+  task: PropTypes.object.isRequired,
+};
+
+TagListItem.propTypes = {
+  tag: PropTypes.object.isRequired,
+};
+
+CommentListItem.propTypes = {
+  comment: PropTypes.object.isRequired,
+};
 
 export default App;
