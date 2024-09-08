@@ -56,11 +56,17 @@ body {
   margin-top: 0.5rem;
 }
 
-.tasks{
-    margin-top: 1rem;
-    padding: 1rem;
+.tasks {
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .tasks li {
-    list-style-type: none;   
+  list-style-type: none;
+}
+
+.grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }

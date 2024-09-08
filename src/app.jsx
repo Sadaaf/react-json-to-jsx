@@ -1,69 +1,113 @@
 import PropTypes from "prop-types";
 import "./app.css";
-const task = {
-  id: "uniqueId001",
-  subtitle: "Subtitle",
-  createdAt: "2024-09-08T04:34:33.191Z",
-  tags: [
-    {
-      id: "tag001",
-      text: "It's done",
-      icon: "T",
-    },
-    {
-      id: "tag002",
-      text: "It's cancelled",
-      icon: "X",
-    },
-    {
-      id: "tag003",
-      text: "It's in progress",
-      icon: "P",
-    },
-    {
-      id: "tag004",
-      text: "Just wrote it",
-      icon: "C",
-    },
-  ],
-  comments: [
-    {
-      commentId: "commentId001",
-      user: {
-        avatar: "xyz.com",
-        name: "Viraj",
-        userId: "userId001",
+const task = [
+  {
+    id: "uniqueId001",
+    subtitle: "Subtitle",
+    createdAt: "2024-09-08T04:34:33.191Z",
+    tags: [
+      {
+        id: "tag001",
+        text: "It's done",
+        icon: "T",
       },
-      text: "In labore laboris amet veniam. Sunt non fugiat Lorem cillum cupidatat fugiat ad. Est velit dolore culpa ut ad eu deserunt in proident adipisicing nisi et adipisicing nisi. Consequat dolore velit dolor qui nostrud dolore culpa. Culpa reprehenderit adipisicing irure et reprehenderit aute sint duis. Consequat eu id qui adipisicing quis aute enim esse. Aute labore ad ex Lorem reprehenderit aliqua et cupidatat ex ipsum exercitation nisi.",
-    },
-  ],
-  tasks: [
-    {
-      id: "task001",
-      title: "Foggy Nelson",
-      text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
-      status: "done",
-    },
-    {
-      id: "task002",
-      title: "Louis Ck",
-      text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
-      status: "cancelled",
-    },
-    {
-      id: "task003",
-      title: "Albert Einstein",
-      text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
-      status: "in progress",
-    },
-    {
-      id: "task004",
-      title: "Albert Einstein",
-      text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
-      status: "in progress",
-    },
-  ],
-};
+      {
+        id: "tag002",
+        text: "It's cancelled",
+        icon: "X",
+      },
+      {
+        id: "tag003",
+        text: "It's in progress",
+        icon: "P",
+      },
+      {
+        id: "tag004",
+        text: "Just wrote it",
+        icon: "C",
+      },
+    ],
+    comments: [
+      {
+        commentId: "commentId001",
+        user: {
+          avatar: "xyz.com",
+          name: "Viraj",
+          userId: "userId001",
+        },
+        text: "In labore laboris amet veniam. Sunt non fugiat Lorem cillum cupidatat fugiat ad. Est velit dolore culpa ut ad eu deserunt in proident adipisicing nisi et adipisicing nisi. Consequat dolore velit dolor qui nostrud dolore culpa. Culpa reprehenderit adipisicing irure et reprehenderit aute sint duis. Consequat eu id qui adipisicing quis aute enim esse. Aute labore ad ex Lorem reprehenderit aliqua et cupidatat ex ipsum exercitation nisi.",
+      },
+    ],
+    tasks: [
+      {
+        id: "task001",
+        title: "Foggy Nelson",
+        text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
+        status: "done",
+      },
+      {
+        id: "task002",
+        title: "Louis Ck",
+        text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
+        status: "cancelled",
+      },
+      {
+        id: "task003",
+        title: "Albert Einstein",
+        text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
+        status: "in progress",
+      },
+      {
+        id: "task004",
+        title: "Albert Einstein",
+        text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
+        status: "in progress",
+      },
+    ],
+  },
+  {
+    id: "uniqueId001",
+    subtitle: "Subtitle",
+    createdAt: "2024-09-08T04:34:33.191Z",
+    tags: [
+      {
+        id: "tag001",
+        text: "It's done",
+        icon: "T",
+      },
+      {
+        id: "tag002",
+        text: "It's cancelled",
+        icon: "X",
+      },
+    ],
+    comments: [
+      {
+        commentId: "commentId001",
+        user: {
+          avatar: "xyz.com",
+          name: "Viraj",
+          userId: "userId001",
+        },
+        text: "In labore laboris amet veniam. Sunt non fugiat Lorem cillum cupidatat fugiat ad. Est velit dolore culpa ut ad eu deserunt in proident adipisicing nisi et adipisicing nisi. Consequat dolore velit dolor qui nostrud dolore culpa. Culpa reprehenderit adipisicing irure et reprehenderit aute sint duis. Consequat eu id qui adipisicing quis aute enim esse. Aute labore ad ex Lorem reprehenderit aliqua et cupidatat ex ipsum exercitation nisi.",
+      },
+    ],
+    tasks: [
+      {
+        id: "task003",
+        title: "Albert Einstein",
+        text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
+        status: "in progress",
+      },
+      {
+        id: "task004",
+        title: "Albert Einstein",
+        text: "Quis eu tempor reprehenderit sunt laboris et mollit tempor exercitation id dolor. Ad quis nulla minim ipsum tempor aute ex eiusmod officia. Sunt sint duis elit culpa culpa officia eu ipsum voluptate laboris culpa sint aliqua. Voluptate dolore aliqua reprehenderit aute dolore.",
+        status: "in progress",
+      },
+    ],
+  },
+];
 
 const getDay = (dateStr) => {
   const day = new Date(dateStr).getDay();
@@ -122,7 +166,7 @@ const formatDate = (dateStr) => {
   return `${date.getDate()} - ${date.getMonth()} - ${date.getFullYear()}`;
 };
 
-const App = () => (
+const TaskCard = ({ task }) => (
   <div className="day-card">
     <h1 className="title">
       {getDay(task.createdAt)}, {formatDate(task.createdAt)}
@@ -148,6 +192,14 @@ const App = () => (
   </div>
 );
 
+const App = () => (
+  <div className="grid">
+    {task.map((t) => (
+      <TaskCard key={t.id} task={t} />
+    ))}
+  </div>
+);
+
 TaskListItem.propTypes = {
   task: PropTypes.object.isRequired,
 };
@@ -158,6 +210,10 @@ TagListItem.propTypes = {
 
 CommentListItem.propTypes = {
   comment: PropTypes.object.isRequired,
+};
+
+TaskCard.propTypes = {
+  task: PropTypes.object.isRequired,
 };
 
 export default App;
